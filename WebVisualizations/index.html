@@ -17,38 +17,68 @@
     <title>Bootstrap Visualization Dashboard</title>
 </head>
 <body>
-    <div class="container">
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.html">Dashboard</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Plots
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="temperature.html">Max Temperature</a>
-                            <a class="dropdown-item" href="humidity.html">Humidity</a>
-                            <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
-                            <a class="dropdown-item" href="wind.html">Wind Speed</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="comparison.html">Comparison</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="data.html">Data</a>
-                    </li>
-                </ul>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Latitude</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Plots
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="temperature.html">Max Temperature</a>
+                                <a class="dropdown-item" href="humidity.html">Humidity</a>
+                                <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+                                <a class="dropdown-item" href="wind.html">Wind Speed</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="comparison.html">Comparison</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="data.html">Data</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
-            <p>Landing Page</p>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-7">
+                    <div class="card">
+                        <h2>Summary: Latitude vs. X</h2>
+                        <hr/>
+                        <p><img src="visualizations/Fig1.png" width="100%"/><br/>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this anlysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
+                        <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Facorts we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-5">
+                    <div class="card">
+                        <h2>Visualizations</h2>
+                        <hr/>
+                        <div class="row">
+                            <div class="col-sm-3 col-md-6"><a href="temperature.html"><img src="visualizations/Fig1.png" width="100%"/></a></div>
+                            <div class="col-sm-3 col-md-6"><a href="humidity.html"><img src="visualizations/Fig2.png" width="100%"/></a></div>
+                            <div class="col-sm-3 col-md-6"><a href="cloudiness.html"><img src="visualizations/Fig3.png" width="100%"/></a></div>
+                            <div class="col-sm-3 col-md-6"><a href="wind.html"><img src="visualizations/Fig4.png" width="100%"/></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <footer class="fixed-bottom">
+</main>
+<footer class="footer mt-auto py-3 fixed-bottom">
+    <div class="container">
         <p style="text-align: center;">&copy; 2020 Timothy L. Lucas | WUSTL Data Bootcamp Visualization | All Rights Reserved.</p>
-    </footer>
+    </div>
+</footer>
 </body>
 </html>
