@@ -17,7 +17,7 @@
 <ul>
 <li>HTML</li>
 <li>CSS</li>
-<li>Bootstrap<li>
+<li>Bootstrap</li>
 <li>Jupyter Notebook</li>
 <li>Python</li>
 <li>Pandas</li>
